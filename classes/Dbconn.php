@@ -1,10 +1,10 @@
 <?php
 
 class Dbconn implements DbconnInterface {
-    private $host = 'localhost';
-    private $username = 'root';
-    private $password = '';
-    private $dbname = 'scandite';
+    private $host = 'sql7.freemysqlhosting.net';
+    private $username = 'sql7610568';
+    private $password = 'eCUITMPhTI';
+    private $dbname = 'sql7610568';
 
     public function connect()
     {
