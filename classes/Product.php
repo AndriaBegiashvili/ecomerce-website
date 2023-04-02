@@ -2,8 +2,8 @@
 abstract class Product extends Dbconn implements ProductInterface{
     public function addProduct()
     {
-        try {
-            $query = "INSERT INTO scandite.products (SKU, Name, Price, Type, Value) VALUES ('$this->SKU', '$this->name', '$this->price', '$this->type', '$this->value')";
+         try {
+            $query = "INSERT INTO products (SKU, Name, Price, Type, Value) VALUES ('$this->SKU', '$this->name', '$this->price', '$this->type', '$this->value')";
             $result = $this->connect()->query($query);
             header('Location: index.php');
 
