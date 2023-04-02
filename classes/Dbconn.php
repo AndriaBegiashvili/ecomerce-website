@@ -8,19 +8,14 @@ class Dbconn implements DbconnInterface {
 
     public function connect()
     {
-        // Create a new mysqli object
-        $mysqli = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
+       $mysqli = new mysqli($this->host, $this->username, $this->password, $this->dbname);
 
-        // Check if the connection was successful
-        if (!$mysqli) {
-            die("Connection failed: " . mysqli_connect_error());
+        if ($mysqli->connect_error) {
+            die("Connection failed: " . $mysqli->connect_error);
         }
+        $mysqli->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE, true);
+        $mysqli->set_charset("utf8mb4");
 
-        // Set default fetch mode to associative array
-        mysqli_options($mysqli, MYSQLI_OPT_INT_AND_FLOAT_NATIVE, true);
-        mysqli_set_charset($mysqli, "utf8mb4");
-
-        // Return the mysqli object
         return $mysqli;
     }
     public function delete($skus){
