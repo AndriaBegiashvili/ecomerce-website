@@ -2,9 +2,9 @@
 
 class Dbconn implements DbconnInterface {
     private $host = 'sql7.freemysqlhosting.net';
-    private $username = 'sql7610568';
-    private $password = 'eCUITMPhTI';
-    private $dbname = 'sql7610568';
+    private $username = 'sql7610577';
+    private $password = 'ftd3Zg2pn9';
+    private $dbname = 'sql7610577';
 
     public function connect()
     {
